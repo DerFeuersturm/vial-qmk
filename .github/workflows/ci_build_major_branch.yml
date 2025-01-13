@@ -43,7 +43,7 @@ jobs:
     - uses: actions/upload-artifact@v3
       with:
         name: MKI
-        path: ./build/mki_vial.uf2
+        path: ./.build/mki_vial.uf2
     
     - name: Compile mkii
       run: |
@@ -51,4 +51,4 @@ jobs:
     - uses: actions/upload-artifact@v3
       with:
           name: MKII
-          path: ./build/mkii_vial.uf2
+          path: ./.build/mkii_vial.uf2
