@@ -1,0 +1,49 @@
+{
+    "name": "Macropad MK II",
+    "vendorId": "0xFEED",
+    "productId": "0x0001",
+    "lighting": "qmk_rgblight",
+    "matrix": {
+        "rows": 4,
+        "cols": 4
+    },
+    "layouts": {
+        "keymap": [
+                [{"x":1},"0,0\n\n\n\n\n\n\n\n\ne","1,0\n\n\n\n\n\n\n\n\ne","2,0\n\n\n\n\n\n\n\n\ne","3,0\n\n\n\n\n\n\n\n\ne"],
+                [{"x":1},"0,1\n\n\n\n\n\n\n\n\ne","1,1\n\n\n\n\n\n\n\n\ne","2,1\n\n\n\n\n\n\n\n\ne","3,1\n\n\n\n\n\n\n\n\ne"],
+                [{"x":1},"0,0","0,1","0,2","0,3","3,3"],
+                ["1,0",{"x":4},"1,3"],
+                ["2,0",{"x":4},"2,3"],
+                ["3,0",{"x":4},"1,2"],
+                ["1,1",{"x":4},"2,2"],
+                ["2,1",{"x":4},"3,2"]
+                
+
+        ]
+    },
+    "vial": {
+        "midi": "advanced"
+    },
+    "customKeycodes": [
+        {"name": "CC_1_DEC", "title": "MIDI CC 1 -", "shortName": "CC 1-"},
+        {"name": "CC_1_INC", "title": "MIDI CC 1 +", "shortName": "CC 1+"},
+        {"name": "CC_2_DEC", "title": "MIDI CC 2 -", "shortName": "CC 2-"},
+        {"name": "CC_2_INC", "title": "MIDI CC 2 +", "shortName": "CC 2+"},
+        {"name": "CC_3_DEC", "title": "MIDI CC 3 -", "shortName": "CC 3-"},
+        {"name": "CC_3_INC", "title": "MIDI CC 3 +", "shortName": "CC 3+"},
+        {"name": "CC_4_DEC", "title": "MIDI CC 4 -", "shortName": "CC 4-"},
+        {"name": "CC_4_INC", "title": "MIDI CC 4 +", "shortName": "CC 4+"},
+        {"name": "CC_5_DEC", "title": "MIDI CC 5 -", "shortName": "CC 5-"},
+        {"name": "CC_5_INC", "title": "MIDI CC 5 +", "shortName": "CC 5+"},
+        {"name": "CC_6_DEC", "title": "MIDI CC 6 -", "shortName": "CC 6-"},
+        {"name": "CC_6_INC", "title": "MIDI CC 6 +", "shortName": "CC 6+"},
+        {"name": "CC_7_DEC", "title": "MIDI CC 7 -", "shortName": "CC 7-"},
+        {"name": "CC_7_INC", "title": "MIDI CC 7 +", "shortName": "CC 7+"},
+        {"name": "CC_8_DEC", "title": "MIDI CC 8 -", "shortName": "CC 8-"},
+        {"name": "CC_8_INC", "title": "MIDI CC 8 +", "shortName": "CC 8+"}
+        ]
+
+}
+
+
+
