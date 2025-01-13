@@ -1,27 +1,51 @@
-# macropad
 
-![macropad](imgur.com image replace me!)
+# Infinitec Macropad MKI
 
-*A short description of the keyboard/project*
+The Macropad MKI is the perfect companion for every desk. 
+Beeing not the biggest or the most expenisve it shines with affordabilidy and the handmade style.
 
-* Keyboard Maintainer: [infinityTec](https://github.com/thebest)
-* Hardware Supported: *The PCBs, controllers supported*
-* Hardware Availability: *Links to where you can find this hardware*
+## Photos
 
-Make example for this keyboard (after setting up your build environment):
+![Macropad MKI](https://github.com/Donnervogel/vial-qmk/MKI.jpg)
 
-    make macropad:default
 
-Flashing example for this keyboard:
+## Setup the Env
 
-    make macropad:default:flash
+clone the repo
 
-See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_tools) and the [make instructions](https://docs.qmk.fm/#/getting_started_make_guide) for more information. Brand new to QMK? Start with our [Complete Newbs Guide](https://docs.qmk.fm/#/newbs).
+```bash
+  git clone https://github.com/Donnervogel/vial-qmk
 
-## Bootloader
+```
+```bash
+   git submodule update --init --recursive
 
-Enter the bootloader in 3 ways:
+```
+install requirements
 
-* **Bootmagic reset**: Hold down the key at (0,0) in the matrix (usually the top left key or Escape) and plug in the keyboard
-* **Physical reset button**: Briefly press the button on the back of the PCB - some may have pads you must short instead
-* **Keycode in layout**: Press the key mapped to `QK_BOOT` if it is available
+```bash
+   pip install -r requirements.txt
+
+```
+```bash
+   sudo apt-get install -y gcc-arm-none-eabi gcc-avr avrdude dfu-programmer dfu-util
+
+```
+install qmk
+```bash
+   pip install qmk
+
+```
+setup qmk
+```bash
+   qmk setup
+
+```
+## Compile
+
+Compile the firmware
+
+```bash
+  qmk compile -kb mki -lm imi
+```
+
