@@ -20,6 +20,12 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
+    - name: Install qmk
+      run: |
+        pip install qmk
+    - name: setup qmk
+      run: |
+        qmk setup
     - name: Compile mki
       run: |
         qmk compile -kb mki -km vial
