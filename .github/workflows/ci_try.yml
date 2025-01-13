@@ -1,0 +1,36 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Compile mki
+      run: |
+        qmk compile -kb mki -km vial
+    - uses: actions/upload-artifact@v3
+      with:
+        name: MKI
+        path: ./build/mki_vial.uf2
+    
+    - name: Compile mki
+      run: |
+          qmk compile -kb mkii -km vial
+    - uses: actions/upload-artifact@v3
+      with:
+          name: MKII
+          path: ./build/mkii_vial.uf2
