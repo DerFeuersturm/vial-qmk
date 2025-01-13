@@ -34,7 +34,7 @@ jobs:
         name: MKI
         path: ./build/mki_vial.uf2
     
-    - name: Compile mki
+    - name: Compile mkii
       run: |
           qmk compile -kb mkii -km vial
     - uses: actions/upload-artifact@v3
