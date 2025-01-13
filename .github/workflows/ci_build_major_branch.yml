@@ -22,6 +22,14 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
+        sudo apt-get update
+        sudo apt-get install -y gcc-arm-none-eabi gcc-avr avrdude dfu-programmer dfu-util
+  
+    - name: Set up udev rules
+      run: |
+          sudo cp $GITHUB_WORKSPACE/util/udev/50-qmk.rules /etc/udev/rules.d/
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger
 
     - name: Install qmk
       run: |
