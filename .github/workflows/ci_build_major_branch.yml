@@ -39,16 +39,16 @@ jobs:
         qmk setup
     - name: Compile mki
       run: |
-        qmk compile -kb mki -km vial
+        qmk compile -kb mki -km imi
     - uses: actions/upload-artifact@v3
       with:
         name: MKI
-        path: ./.build/mki_vial.uf2
+        path: ./.build/mki_imi.uf2
     
     - name: Compile mkii
       run: |
-          qmk compile -kb mkii -km vial
+          qmk compile -kb mkii -km imi
     - uses: actions/upload-artifact@v3
       with:
           name: MKII
-          path: ./.build/mkii_vial.uf2
+          path: ./.build/mkii_imi.uf2
