@@ -9,7 +9,7 @@ This is a keyboard firmware based on the [qmk\_keyboard firmware](https://github
 ## Supported Keyboards
 
 * [MKI](/keyboards/mki/readme.md)
-* [MMKII](/keyboards/mkii/readme.md)
+* [MKII](/keyboards/mkii/readme.md)
 
 
 ## Maintainers
